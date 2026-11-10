@@ -5,8 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prestart": "npm run build",
     "start": "electron electron/main.cjs",
     "build": "tsc -b && vite build",
+    "test": "node --test electron/tests/database.test.cjs",
     "lint": "oxlint",
     "preview": "vite preview"
   },
