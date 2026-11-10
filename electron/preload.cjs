@@ -10,8 +10,8 @@ contextBridge.exposeInMainWorld('electronAPI', {
     deleteGame: (gameId, clientId) =>
         ipcRenderer.invoke('deleteGame', gameId, clientId),
 
-    scanGames: (clientId) =>
-        ipcRenderer.invoke('scanGames', clientId),
+    scanGames: () =>
+        ipcRenderer.invoke('scanGames'),
 
     playGame: (gameId, clientId) =>
         ipcRenderer.invoke('playGame', gameId, clientId)

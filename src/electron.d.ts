@@ -5,6 +5,11 @@ interface Game {
     clientId: number
 }
 
+interface ScannedGame {
+    name: string
+    gamePath: string
+}
+
 interface Window {
     electronAPI: {
         getGames: (clientId: number) => Promise<Game[]>
@@ -20,7 +25,7 @@ interface Window {
             clientId: number
         ) => Promise<boolean>
 
-        scanGames: (clientId: number) => Promise<number>
+        scanGames: () => Promise<ScannedGame[]>
 
         playGame: (
             gameId: number,

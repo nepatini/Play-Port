@@ -1,3 +1,4 @@
+
 body {
     margin: 20px;
     font-family: Arial, sans-serif;
@@ -17,13 +18,12 @@ select {
     padding: 5px;
     background: #000000;
     color: white;
-    border: 1px solid white
+    border: 1px solid white;
 }
 
 option {
     background: #000000;
     color: white;
-    border: 1px solid white
 }
 
 input {
@@ -31,7 +31,7 @@ input {
     margin: 5px;
     background: #000000;
     color: white;
-    border: 1px solid white
+    border: 1px solid white;
 }
 
 button {
@@ -40,16 +40,68 @@ button {
     cursor: pointer;
     background: #000000;
     color: white;
-    border: 1px solid white
-    ;
-
+    border: 1px solid white;
 }
 
-select {
-    padding: 5px;
+button:hover {
+    background: #222222;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 li {
+    list-style: none;
     padding: 8px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #444444;
+}
+
+ul {
+    padding-left: 0;
+}
+
+.scan-game {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    margin: 6px 0;
+    background: #111111;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    cursor: pointer;
+    max-width: 450px;
+    transition: 0.2s;
+}
+
+.scan-game:hover {
+    background: #1c1c1c;
+    border-color: #777777;
+}
+
+.scan-game:has(input:checked) {
+    background: #101d35;
+    border-color: #3b82f6;
+}
+
+.scan-game input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    accent-color: #3b82f6;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.scan-game span {
+    font-size: 15px;
+    color: white;
+}
+
+.scan-game:has(input:disabled) {
+    opacity: 0.5;
+    cursor: not-allowed;
 }

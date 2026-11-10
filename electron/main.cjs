@@ -35,23 +35,8 @@ app.whenReady().then(() => {
         return database.deleteGame(gameId, clientId)
     })
 
-    ipcMain.handle('scanGames', (event, clientId) => {
-        const games = scanner.scanGames()
-        let added = 0
-
-        for (const game of games) {
-            const result = database.addGame(
-                game.name,
-                game.gamePath,
-                clientId
-            )
-
-            if (result === 'success') {
-                added++
-            }
-        }
-
-        return added
+    ipcMain.handle('scanGames', () => {
+        return scanner.scanGames()
     })
 
     ipcMain.handle('playGame', (event, gameId, clientId) => {
