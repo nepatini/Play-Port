@@ -1,0 +1,42 @@
+body {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    background: #000000;
+    color: white;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+input {
+    padding: 7px;
+    margin: 5px;
+    background: #000000;
+    color: white;
+    border: 1px solid white
+}
+
+button {
+    padding: 7px 12px;
+    margin: 5px;
+    cursor: pointer;
+    background: #000000;
+    color: white;
+    border: 1px solid white
+    ;
+
+}
+
+select {
+    padding: 5px;
+}
+
+li {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
